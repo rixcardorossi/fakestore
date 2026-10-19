@@ -24,13 +24,13 @@ const products = await getCollection("products");
   <!-- TODO: loop over `products` and render one <li> per product.
        Start with just the title, swap in <ProductCard /> later. -->
 
-  
-    {
-      products.map((product) => (
-        <li>
+  {
+    products.map((product) => (
+      <li>
+        <a href={`/products/${product.data.id}`}>
           <ProductCard product={product.data} />
-        </li>
-      ))
-    }
-  
+        </a>
+      </li>
+    ))
+  }
 </ul>
